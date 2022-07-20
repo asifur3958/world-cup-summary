@@ -1,0 +1,81 @@
+/* universal reseting */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* importing google fonts - poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* font implementation*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+/* main container */
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 1st section modification */
+.intro-live{
+    display: flex;
+    align-items: center;
+    height:90vh;
+    width: 83.25%;
+    background-color:#161616;
+    border-radius: 30px;
+}
+
+/* left flexbox modification */
+.live-details{
+    width: 50%;
+    height: 100%;
+    color: #FFFFFF;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+    padding: 100px;
+}
+.intro{
+    font-size: 70px;
+    font-weight: 700;
+}
+.intro-description{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* live-watch button modification  */
+.live-button>a{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: 400;
+    background-color: red;
+    border-radius: 5px;
+    padding: 16px 25px;
+}
+
+/* button video icon modification */
+.fa-video{
+    position:relative;
+    left: 10px;
+    top: .5px;
+}
+
+/* 1st section player image */
+.player-image{
+    width: 50%;
+    height: 100%;
+}
+.intro-live .player-image>img{
+    width: 90%;
+    position: relative;
+    top: 36px;
+
+}
