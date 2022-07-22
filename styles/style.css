@@ -600,21 +600,15 @@ media query starts
     }
     .view-all{
         display: block;
-        margin
     }
 
     .footer-nav{
-        text-align: center;
+        text-align:center;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         column-gap: 40px;
-    }
-
-    .tablet-nav{
-        display: flex;
-        flex-direction: column;
     }
 
     .footer-nav a{
