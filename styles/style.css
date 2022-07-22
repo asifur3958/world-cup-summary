@@ -30,6 +30,7 @@ top section design starts
 
 /* main container */
 .container{
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,18 +39,18 @@ top section design starts
 /* top section modification */
 
 .intro-live{
-    display: flex;
+    height: 95vh;
     width: 83.25%;
     background-color:#1B1938;
+    display: flex;
     border-radius: 30px;
-    margin-top: 50px;
-    margin-bottom: 50px;
     transition: width .5s;
+    overflow: hidden;
 }
 
 /* left flexbox modification */
 .live-details{
-    position: relative;
+    height: 100%;
     width: 50%;
     color: #FFFFFF;
     display:flex;
@@ -59,7 +60,7 @@ top section design starts
 }
 
 .intro{
-    font-size: 4.375em;
+    font-size: 70px;
     font-weight: 700;
 }
 /* ''GREATEST'' word color differ */
@@ -74,7 +75,8 @@ color:#AA5CDB;
 }
 
 /* WATCH-LIVE button  */
-.live-details>a{
+.live-button a{
+    text-decoration: none;
     background-color: red;
     width: 40%;
     text-decoration: none;
@@ -84,25 +86,18 @@ color:#AA5CDB;
     padding: 16px 25px;
 }
 
-/* WATCH-LIVE video icon modification */
-.fa-video{
-    position:relative;
-    left: 5px;
-    top: .5px;
-}
-
 /* top section player image */
 .player-image{
+    height: 100%;
     width: 50%;
     position: relative;
 }
 
 /* player image modifications */
 .intro-live .player-image>img{
+    height: 100%;
     width: 100%;
     position: relative;
-    top: .7%;
-    right: 5%;
     filter:grayscale(100);
 }
 
@@ -134,23 +129,35 @@ top section design ends
 /* ----------------------------------
 middle section design starts
 ---------------------------------- */
+.container-02{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: center;
+    margin-top: 6%;
+}
 
 .blogs-n-button-section{
-    padding-left: 10px;
-    display: flex;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    position: relative;
+    height: 100%;
     width: 83.25%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 24px;
+    grid-template-columns: 19.95em repeat(1, 1fr);
+    justify-content: center;
+    gap: 20px;
 }
 
 /* nav buttons container */
+.nav-buttons-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
+}
 .nav-buttons{
-    text-align: center;
-    height: 312px;
-    width: 312px;
+    height: 30%;
+    width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -215,34 +222,49 @@ middle section design starts
 
 /* all-blogs section starts */
 .all-blogs{
+    height: 98%;
+    width:100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
+    row-gap: 20px;
+    column-gap: 20px;
 }
 
 .individual-blog{
+    height: 100%;
+    width: 100%;
     color:#FFFFFF;
+    border-radius: 10px;
+    display: flex;
+    row-gap: 10px;
+    flex-direction: column;
     background-color: #615ca3;
     border: 1px outset #530086;
-    border-radius: 10px;
-    margin-bottom: 20px;
 }
-.individual-blog, .blog-info{
+.individual-blog img{
+    position: relative;
+    width: 100%;
+}
+
+.blog-info{
     display: flex;
     flex-direction: column;
     row-gap: 15px;
 }
 
 .blog-info{
-padding: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom:20px;
 }
 
-.transfer{
-    border: 1px solid white;
+.blog-info a{
+    text-decoration: none;
+    color: white;
+    border: 2px outset white;
     border-radius: 5px;
-    padding: 4px 16px;
-    width: 32%;
-    margin-top: -20px;
+    width: 68px;
+    padding: 2px 3px;
 }
 
 /* duration-comment icons modifications */
@@ -267,6 +289,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 margin-bottom:100px;
+margin-top: 50px;
 }
 
 .view-all{
@@ -274,7 +297,7 @@ margin-bottom:100px;
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 400;
-    background-color: red;
+    background-color: #DD0000;
     padding: 12px 30px;
     border-radius: 5px;
     display: none;
@@ -289,16 +312,15 @@ middle section design ends
 footer section design starts
 ---------------------------------- */
 footer{
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     row-gap: 50px;
     background-color: #161616;
-    padding-top: 8%;
-    padding-bottom: 8%;
-    margin-left: 0;
-    margin-right: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 h1{
@@ -315,6 +337,7 @@ hr{
 
 /* footer navigation buttons container */
 .footer-nav{
+    text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -324,6 +347,7 @@ hr{
 
 /* footer buttons */
 .footer-nav a{
+    text-align: center;
     color:#B9B9B9;
     font-size: 16px;
     font-weight: 500;
@@ -334,6 +358,7 @@ hr{
 
 /* social buttons container */
 .social-buttons{
+    text-align: center;
     display: flex;
     align-items: center;
     column-gap: 20px; 
@@ -341,6 +366,7 @@ hr{
 
 /* social buttons */
 .social-buttons i{
+    text-align: center;
     font-size: 40px;
     color: white;
     opacity: 90%;
@@ -361,131 +387,240 @@ media query starts
 ------------------------- */
 
 
-@media only screen and (max-width:834px){
+@media only screen and (max-width:375px){
+
     .intro-live{
+        height: 95vh;
         width: 83.25%;
-        height: 2%;
+        display: flex;
+        flex-direction: column;
+        overflow: visible;
+        justify-content: center;
+        align-items: center;
     }
-    .blogs-n-button-section{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    margin-bottom: 50px;
-    width: 83.25%;
+    .live-details{
+        text-align:center;
+        padding: 40px;
+        width: 100%;
+        height: 50%;
+        display:flex;
+        flex-direction: column;
+        row-gap: 20px;
     }
     
-    /* nav buttons container */
-    .nav-buttons{
-        margin-left: 45px;
-        margin-top: -80px;
-        text-align: center;
-        height: 150px;
+    .intro{
+        font-size: 25px;
+        font-weight: 700;
+    }
+    
+    .intro-description{
+        text-align:center;
+        font-size: 14px;
+    }
+    
+    .live-button a{
+        border-radius: 5px;
+        padding: 12px 18px;
+    }
+    
+    /* top section player image */
+    .player-image{
+        height: 100%;
+        width: 50%;
+        position: relative;
+        left: 10px;
+    }
+    
+    /* player image modifications */
+    .intro-live .player-image>img{
+        height: 100%;
+        width: 100%;
+        position: relative;
+        filter:grayscale(100);
+    }
+
+    .blogs-n-button-section{
+        height: 100%;
         width: 100%;
         display: flex;
+        flex-direction: column;
         align-items: center;
-        flex-direction: row;
-        border: 1px inset #AA5CDB;
-        background-color: #1B1938;
-        border-radius: 10px;
+    }
+
+    .nav-buttons-container{
+        position: relative;
+        text-align: center;
+        height:70%;
+        width: 45%;
+    }
+
+    .nav-buttons{
+        height: 150px;
+        width: 100%;
+    }
+
+    .nav-buttons a{
+        font-size: 15px;
+        font-weight: 500;
     }
 
     .nav-up-matches{
-        padding: 15px 20px;
+        padding: 7px 7px;
     }
 
     .nav-all-group{
-        padding: 15px 80px;
+        padding: 7px 40px;
     }
 
     .nav-blog{
-        padding: 15px 96px;
-    }
-
-    .view-all{
-        display: block;
-    }
-
-    footer{
-        display: flex;
-        justify-content: center;
-    }
-    .footer-nav{
-        display: flex;
-        justify-content: center;
+        padding: 6px 55px;
     }
 
     .all-blogs{
-        margin-left: 85px;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
     }
-    .last-blog{
-        display: none;
+    .individual-blog{
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .footer-nav{
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0px;
+    }
+
+    .footer-nav a{
+        text-align: center;
+        font-size: 13px;
+        text-decoration: none;
+        justify-content:space-around;
     }
 }
-@media only screen and (max-width:375px){
+@media only screen and (max-width:834px){
     .intro-live{
-        width: 83.25%;
-        height: 2%;
-    }
-    .blogs-n-button-section{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    justify-content: center;
-    margin-bottom: 50px;
-    width: 83.25%;
+        height: 90vh;
+        width: 90%;
+        overflow: hidden;
     }
     
-    /* nav buttons container */
-    .nav-buttons{
-        margin-left: 45px;
-        margin-top: -80px;
-        text-align: center;
-        height: 150px;
-        width: 100%;
+    /* left flexbox modification */
+    .live-details{
+        height: 100%;
+        width: 50%;
+        color: #FFFFFF;
+        display:flex;
+        flex-direction: column;
+        justify-content:space-between;
+        padding: 40px;
+        padding-left: 60px;
+    }
+    
+    .intro{
+        font-size: 50px;
+    }
+    
+    .intro-description{
+        font-size: 14px;
+    }
+    
+    /* WATCH-LIVE button  */
+    .live-button a{
+        width: 20%;
+        padding: 13px 15px;
+    }
+    
+    /* top section player image */
+    .player-image{
+        position: relative;
+        left: -20px;
+    }
+
+    .blogs-n-button-section{
+        height: 100%;
+        width: 90%;
         display: flex;
+        flex-direction: column;
         align-items: center;
+        justify-content: center;
+    }
+
+    .nav-buttons-container{
+        position: relative;
+        text-align: center;
+        height:50%;
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .nav-buttons{
+        display: flex;
         flex-direction: row;
-        border: 1px inset #AA5CDB;
-        background-color: #1B1938;
-        border-radius: 10px;
+        height: 120px;
+        width: 100%;
+    }
+
+    .nav-buttons a{
+        font-size: 20px;
+        font-weight: 500;
     }
 
     .nav-up-matches{
-        padding: 15px 20px;
+        padding: 15px 12px;
     }
-
     .nav-all-group{
+        padding: 15px 59px;
+    }
+    .nav-blog{
         padding: 15px 80px;
     }
 
-    .nav-blog{
-        padding: 15px 96px;
-    }
-
-    .view-all{
-        display: block;
-    }
-
-    footer{
-        display: flex;
-        justify-content: center;
-    }
-    .footer-nav{
-        display: flex;
-        justify-content: center;
-    }
-
     .all-blogs{
-        margin-left: 85px;
+        height: 98%;
+        width:100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 20px;
+        column-gap: 20px;
         justify-content: center;
         align-items: center;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
     }
     .last-blog{
         display: none;
+    }
+
+    .individual-blog{
+        width: 100%;
+        flex-direction: column;
+    }
+    .view-all{
+        display: block;
+        margin
+    }
+
+    .footer-nav{
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        column-gap: 40px;
+    }
+
+    .tablet-nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-nav a{
+        text-align: center;
+        font-size: 16px;
+        text-decoration: none;
+        justify-content:space-around;
     }
 }
